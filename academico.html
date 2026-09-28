@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Académico · Centro de Estudiantes UTN FRRQ</title>
+
+    <meta name="description" content="Servicios académicos UTN FRRQ. Formularios, licencias estudiantiles y calendario académico para estudiantes." />
+    <meta name="keywords" content="UTN, FRRQ, Académico, Formularios, Licencias Estudiantiles, Calendario, Trámites" />
+    <meta name="author" content="Bergesio Sebastián & Fernández María Eugenia" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://tu-dominio.com/academico.html" />
+
+    <meta property="og:title" content="Académico · Centro de Estudiantes UTN FRRQ" />
+    <meta property="og:description" content="Servicios académicos UTN FRRQ. Formularios, licencias estudiantiles y calendario académico." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-dominio.com/academico.html" />
+    <meta property="og:image" content="https://tu-dominio.com/archivos/logo-utn-og.jpg" />
+    <meta property="og:site_name" content="CEUT FETI" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Académico · Centro de Estudiantes UTN FRRQ" />
+    <meta name="twitter:description" content="Servicios académicos UTN FRRQ. Formularios, licencias estudiantiles y calendario académico." />
+    <meta name="twitter:image" content="https://tu-dominio.com/archivos/logo-utn-og.jpg" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0A1628" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/archivos/icon-192x192.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --azul-oscuro: #0A1628;
+            --azul: #1a3a6b;
+            --azul-claro: #2B5B8C;
+            --naranja: #F57C00;
+            --naranja-claro: #FFA726;
+            --gris: #F1F3F7;
+            --blanco: #FFFFFF;
+            --texto: #1F2937;
+            --texto-claro: #6B7280;
+            --sombra: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --sombra-hover: 0 8px 40px rgba(0, 0, 0, 0.08);
+            --radio: 14px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-color: #F1F3F7;
+            --card-bg: #FFFFFF;
+            --border-color: #e5e7eb;
+            --shadow-color: rgba(0, 0, 0, 0.04);
+            --panel-bg: #FFFFFF;
+            --panel-border: #eef0f2;
+            --badge-whatsapp-bg: rgba(37, 211, 102, 0.15);
+            --badge-whatsapp-color: #1da851;
+            --badge-rural-bg: rgba(46, 125, 50, 0.15);
+            --badge-rural-color: #2E7D32;
+            --badge-higiene-bg: rgba(245, 124, 0, 0.15);
+            --badge-higiene-color: #E65100;
+            --badge-industrial-bg: rgba(33, 150, 243, 0.15);
+            --badge-industrial-color: #0D47A1;
+            --badge-mecatronica-bg: rgba(255, 193, 7, 0.15);
+            --badge-mecatronica-color: #F57F17;
+            --badge-logistica-bg: rgba(233, 30, 99, 0.15);
+            --badge-logistica-color: #880E4F;
+            --badge-programacion-bg: rgba(156, 39, 176, 0.15);
+            --badge-programacion-color: #6A1B9A;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --texto: #E5E7EB;
+            --texto-claro: #9CA3AF;
+            --gris: #1A1A1A;
+            --blanco: #1E1E1E;
+            --card-bg: #1E1E1E;
+            --sombra: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --sombra-hover: 0 8px 40px rgba(0, 0, 0, 0.6);
+            --border-color: #2D2D2D;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --panel-bg: #2D2D2D;
+            --panel-border: #3D3D3D;
+            --azul-oscuro: #1a3a6b;
+            --azul: #2B5B8C;
+            --azul-claro: #4A7FB5;
+            --badge-whatsapp-bg: rgba(37, 211, 102, 0.2);
+            --badge-whatsapp-color: #4ADE80;
+            --badge-rural-bg: rgba(74, 222, 128, 0.15);
+            --badge-rural-color: #4ADE80;
+            --badge-higiene-bg: rgba(251, 146, 60, 0.2);
+            --badge-higiene-color: #FB923C;
+            --badge-industrial-bg: rgba(66, 165, 245, 0.2);
+            --badge-industrial-color: #64B5F6;
+            --badge-mecatronica-bg: rgba(255, 213, 79, 0.2);
+            --badge-mecatronica-color: #FFD54F;
+            --badge-logistica-bg: rgba(244, 143, 177, 0.2);
+            --badge-logistica-color: #F06292;
+            --badge-programacion-bg: rgba(206, 147, 216, 0.2);
+            --badge-programacion-color: #CE93D8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--texto);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; height: auto; }
+
+        a, button {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== HEADER ===== */
+        .main-header {
+            background: var(--card-bg);
+            padding: 14px 0;
+            padding-top: calc(14px + env(safe-area-inset-top, 0px));
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--naranja);
+            box-shadow: 0 2px 20px var(--shadow-color);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .header-container { display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo-icon {
+            width: 60px; height: 60px;
+            background: var(--azul-oscuro);
+            padding: 6px;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(10, 22, 40, 0.15);
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+        .logo-icon:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(10, 22, 40, 0.25); }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            display: block;
+        }
+        .logo-utn { font-weight: 800; font-size: 1.15rem; color: var(--texto); letter-spacing: -0.3px; transition: color 0.3s ease; }
+        .logo-sub { font-size: 0.55rem; color: var(--texto-claro); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 500; transition: color 0.3s ease; }
+        .nav-list { display: flex; gap: 4px; list-style: none; align-items: center; }
+        .nav-list a {
+            color: var(--texto-claro);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+        .nav-list a:hover { color: var(--texto); background: var(--gris); }
+        .nav-list a.active { color: white; background: var(--azul-oscuro); }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+        .hamburger span { width: 26px; height: 2.5px; background: var(--texto); border-radius: 2px; transition: background 0.3s ease; }
+        .theme-toggle {
+            background: var(--gris);
+            border: none;
+            border-radius: 50%;
+            width: 44px; height: 44px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: var(--texto);
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+        }
+        .theme-toggle:hover { background: var(--naranja); color: white; transform: rotate(30deg); }
+
+        /* ===== BOTÓN DESPLEGABLE ===== */
+        .btn-desplegar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--gris);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--azul);
+            transition: all var(--transition);
+            width: 100%;
+            min-height: 48px;
+        }
+        .btn-desplegar:hover {
+            background: rgba(26, 58, 107, 0.08);
+            border-color: var(--azul);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 58, 107, 0.15);
+        }
+        .btn-desplegar:active { transform: scale(0.97); }
+        .btn-desplegar .btn-desplegar-texto { display: flex; align-items: center; gap: 8px; flex: 1; text-align: left; }
+        .btn-desplegar .btn-desplegar-texto i { font-size: 1rem; flex-shrink: 0; }
+        .btn-desplegar .toggle-icon { font-size: 0.9rem; transition: transform 0.3s ease; flex-shrink: 0; }
+        .btn-desplegar.abierto { border-color: var(--naranja); background: rgba(245, 124, 0, 0.06); }
+        .btn-desplegar.abierto .toggle-icon { transform: rotate(180deg); }
+        .btn-desplegar-licencias {
+            background: rgba(245, 124, 0, 0.08);
+            border-color: var(--naranja);
+            color: var(--naranja);
+        }
+        .btn-desplegar-licencias:hover {
+            background: rgba(245, 124, 0, 0.15);
+            border-color: var(--naranja-claro);
+            box-shadow: 0 4px 12px rgba(245, 124, 0, 0.2);
+        }
+        .btn-desplegar-licencias .btn-desplegar-texto i { color: var(--naranja); }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: var(--azul-oscuro);
+            padding: 40px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 40%; height: 6px;
+            background: linear-gradient(90deg, var(--azul), var(--naranja));
+        }
+        .page-header h1 { font-size: 2.2rem; font-weight: 900; color: white; letter-spacing: -1px; }
+        .page-header h1 i { color: var(--naranja-claro); margin-right: 10px; }
+        .page-header p { color: rgba(255, 255, 255, 0.7); margin-top: 4px; font-size: 0.95rem; }
+        .page-content { padding: 40px 0; }
+
+        /* ===== GRID CARDS ===== */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card-asym {
+            background: var(--card-bg);
+            border-radius: var(--radio);
+            padding: 24px 20px;
+            box-shadow: var(--sombra);
+            transition: all var(--transition);
+            border-left: 4px solid var(--azul);
+            display: flex;
+            flex-direction: column;
+            min-height: 180px;
+            cursor: pointer;
+        }
+        .card-asym:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-hover);
+            border-left-color: var(--naranja);
+        }
+        .card-asym .icon { font-size: 2rem; color: var(--azul-claro); margin-bottom: 8px; transition: color 0.3s ease; pointer-events: none; }
+        .card-asym h3 { font-size: 0.95rem; font-weight: 700; color: var(--texto); transition: color 0.3s ease; pointer-events: none; }
+        .card-asym p { font-size: 0.8rem; color: var(--texto-claro); margin: 4px 0 8px; flex: 1; transition: color 0.3s ease; pointer-events: none; }
+        .card-asym .badge {
+            display: inline-block;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: rgba(245, 124, 0, 0.1);
+            color: var(--naranja);
+            margin-bottom: 4px;
+            align-self: flex-start;
+            pointer-events: none;
+        }
+        .card-asym .badge-whatsapp { background: var(--badge-whatsapp-bg); color: var(--badge-whatsapp-color); }
+        .card-asym .badge-rural { background: var(--badge-rural-bg); color: var(--badge-rural-color); }
+        .card-asym .badge-higiene { background: var(--badge-higiene-bg); color: var(--badge-higiene-color); }
+        .card-asym .badge-industrial { background: var(--badge-industrial-bg); color: var(--badge-industrial-color); }
+        .card-asym .badge-mecatronica { background: var(--badge-mecatronica-bg); color: var(--badge-mecatronica-color); }
+        .card-asym .badge-logistica { background: var(--badge-logistica-bg); color: var(--badge-logistica-color); }
+        .card-asym .badge-programacion { background: var(--badge-programacion-bg); color: var(--badge-programacion-color); }
+        .card-asym .badge-whatsapp,
+        .card-asym .badge-rural,
+        .card-asym .badge-higiene,
+        .card-asym .badge-industrial,
+        .card-asym .badge-mecatronica,
+        .card-asym .badge-logistica,
+        .card-asym .badge-programacion {
+            display: inline-block;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 4px;
+            align-self: flex-start;
+            pointer-events: none;
+        }
+        .card-asym a {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--azul);
+            text-decoration: none;
+            transition: all var(--transition);
+            align-self: flex-start;
+        }
+        .card-asym a:hover { color: var(--naranja); }
+        .card-asym:not(.panel-btn) { cursor: default; }
+        .card-licencias { cursor: pointer; }
+        .card-licencias.abierto { border-left-color: var(--naranja); }
+
+        /* ===== PANEL FLOTANTE ===== */
+        .panel-wrapper { position: relative; display: flex; flex-direction: column; }
+        .panel-wrapper .card-asym { cursor: pointer; min-height: 180px; }
+        .panel-flotante {
+            display: none;
+            background: var(--panel-bg);
+            border-radius: var(--radio);
+            box-shadow: var(--sombra-hover);
+            padding: 8px 0;
+            border: 1px solid var(--panel-border);
+            max-height: 400px;
+            overflow-y: auto;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0; right: 0;
+            z-index: 999;
+        }
+        .panel-flotante.visible { display: block; animation: slideDown 0.25s ease forwards; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-8px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .panel-flotante .item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--texto);
+            transition: all 0.2s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .panel-flotante .item:last-child { border-bottom: none; }
+        .panel-flotante .item:hover { background: var(--gris); padding-left: 26px; }
+        .panel-flotante .item i:first-child { font-size: 1.1rem; width: 24px; text-align: center; flex-shrink: 0; }
+        .panel-flotante .item .item-nombre { font-size: 0.8rem; font-weight: 500; flex: 1; text-align: left; }
+        .panel-flotante .item .item-icono { color: var(--azul-claro); font-size: 0.7rem; opacity: 0.4; transition: all 0.2s ease; }
+        .panel-flotante .item:hover .item-icono { opacity: 1; color: var(--naranja); }
+        .panel-flotante::-webkit-scrollbar { width: 4px; }
+        .panel-flotante::-webkit-scrollbar-track { background: var(--gris); border-radius: 4px; }
+        .panel-flotante::-webkit-scrollbar-thumb { background: var(--naranja); border-radius: 4px; }
+        .panel-flotante .item-whatsapp i:first-child { color: #25D366; }
+        .panel-flotante .item-whatsapp:hover i:first-child { color: #1da851; }
+
+        /* ===== MODAL DE LOGOS ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.active { display: flex; animation: modalFadeIn 0.3s ease forwards; }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: var(--radio);
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            border-bottom: 2px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        .modal-header h2 { font-size: 1.1rem; font-weight: 700; color: var(--texto); }
+        .modal-header h2 i { color: var(--naranja); margin-right: 10px; }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--texto-claro);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            line-height: 1;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover { color: #dc3545; transform: rotate(90deg); }
+        .modal-body { padding: 16px 20px; overflow-y: auto; flex: 1; }
+        .modal-body .logo-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s ease;
+        }
+        .modal-body .logo-item:last-child { border-bottom: none; }
+        .modal-body .logo-item:hover { background: var(--gris); border-radius: 6px; }
+
+        .modal-body .logo-item .preview {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #4B5563;
+            background: #6B7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease;
+        }
+        .modal-body .logo-item:hover .preview {
+            background: #D1D5DB;
+            border-color: var(--azul-claro);
+        }
+        [data-theme="dark"] .modal-body .logo-item .preview {
+            background: #2A2A2A;
+            border-color: #3D3D3D;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        [data-theme="dark"] .modal-body .logo-item:hover .preview {
+            background: #383838;
+            border-color: var(--naranja);
+        }
+        .modal-body .logo-item .preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .modal-body .logo-item .info { flex: 1; min-width: 0; }
+        .modal-body .logo-item .info .nombre { font-size: 0.8rem; font-weight: 600; color: var(--texto); }
+        .modal-body .logo-item .info .detalle { font-size: 0.65rem; color: var(--texto-claro); }
+        .modal-body .logo-item .acciones { display: flex; gap: 6px; flex-shrink: 0; }
+        .modal-body .logo-item .acciones a {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+            background: var(--gris);
+            color: var(--texto);
+            cursor: pointer;
+            min-height: 36px;
+        }
+        .modal-body .logo-item .acciones a:hover { transform: translateY(-1px); }
+        .modal-body .logo-item .acciones a i { font-size: 0.68rem; }
+        .modal-body .logo-item .acciones .btn-png { background: rgba(26, 58, 107, 0.08); color: var(--azul); border-color: var(--azul); }
+        .modal-body .logo-item .acciones .btn-png:hover { background: var(--azul); color: white; }
+        .modal-body .logo-item .acciones .btn-svg { background: rgba(245, 124, 0, 0.08); color: var(--naranja); border-color: var(--naranja); }
+        .modal-body .logo-item .acciones .btn-svg:hover { background: var(--naranja); color: white; }
+        .modal-body::-webkit-scrollbar { width: 4px; }
+        .modal-body::-webkit-scrollbar-track { background: var(--gris); border-radius: 4px; }
+        .modal-body::-webkit-scrollbar-thumb { background: var(--naranja); border-radius: 4px; }
+
+        /* ===== LICENCIAS ===== */
+        .licencias-section {
+            display: none;
+            margin-top: 30px;
+            background: var(--card-bg);
+            border-radius: var(--radio);
+            padding: 32px 36px;
+            box-shadow: var(--sombra);
+            border-top: 5px solid var(--naranja);
+            transition: all var(--transition);
+            animation: fadeInUp 0.4s ease forwards;
+        }
+        .licencias-section.visible { display: block; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .licencias-section:hover { box-shadow: var(--sombra-hover); }
+        .licencias-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+        .licencias-header .icono-grande { font-size: 2.5rem; color: var(--naranja); }
+        .licencias-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--texto); transition: color 0.3s ease; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+        .licencias-header .badge-ordenanza {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            background: rgba(245, 124, 0, 0.12);
+            color: var(--naranja);
+        }
+        .licencias-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .licencias-col { display: flex; flex-direction: column; gap: 16px; }
+        .licencias-col .bloque {
+            background: var(--gris);
+            border-radius: 8px;
+            padding: 18px 20px;
+            border-left: 4px solid var(--azul);
+            transition: all var(--transition);
+        }
+        .licencias-col .bloque:hover { border-left-color: var(--naranja); }
+        .licencias-col .bloque h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--texto);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            transition: color 0.3s ease;
+        }
+        .licencias-col .bloque h4 i { color: var(--naranja); font-size: 1rem; flex-shrink: 0; }
+        .licencias-col .bloque p { font-size: 0.8rem; color: var(--texto-claro); line-height: 1.6; transition: color 0.3s ease; }
+        .licencias-col .bloque ul { list-style: none; padding: 0; margin: 4px 0; }
+        .licencias-col .bloque ul li {
+            font-size: 0.78rem;
+            color: var(--texto-claro);
+            padding: 3px 0 3px 24px;
+            position: relative;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+        .licencias-col .bloque ul li i { position: absolute; left: 0; top: 5px; color: #10B981; font-size: 0.7rem; }
+        .licencias-col .bloque.destacado { border-left-color: var(--naranja); background: rgba(245, 124, 0, 0.08); }
+        .licencias-col .bloque.destacado h4 i { color: var(--naranja-claro); }
+        .tabla-licencias { width: 100%; font-size: 0.78rem; border-collapse: collapse; margin: 4px 0; }
+        .tabla-licencias td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--texto);
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .tabla-licencias td:first-child { font-weight: 600; color: var(--texto); }
+        .tabla-licencias td:last-child { color: var(--texto-claro); text-align: right; }
+        .tabla-licencias tr:hover td { background: rgba(245, 124, 0, 0.04); }
+        .lista-pasos-lic { list-style: none; padding: 0; margin: 4px 0; counter-reset: paso-lic; }
+        .lista-pasos-lic li {
+            font-size: 0.78rem;
+            color: var(--texto-claro);
+            padding: 5px 0 5px 30px;
+            position: relative;
+            line-height: 1.5;
+            counter-increment: paso-lic;
+            transition: color 0.3s ease;
+        }
+        .lista-pasos-lic li::before {
+            content: counter(paso-lic);
+            position: absolute;
+            left: 0; top: 5px;
+            width: 22px; height: 22px;
+            background: var(--azul-oscuro);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-ordenanza-lic {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 16px;
+            padding: 12px 28px;
+            background: var(--azul-oscuro);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition);
+            border: none;
+            cursor: pointer;
+            min-height: 48px;
+        }
+        .btn-ordenanza-lic:hover { background: var(--azul); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(26, 58, 107, 0.3); }
+        .btn-ordenanza-lic i { font-size: 1rem; }
+        .licencias-footer {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .licencias-footer .cerrar-licencias {
+            color: var(--texto-claro);
+            font-size: 0.75rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all var(--transition);
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: inherit;
+            min-height: 44px;
+            padding: 8px 12px;
+        }
+        .licencias-footer .cerrar-licencias:hover { color: #dc3545; }
+
+        /* ===== CALENDARIO ===== */
+        .calendario-section {
+            margin-top: 40px;
+            background: var(--card-bg);
+            border-radius: var(--radio);
+            padding: 28px;
+            box-shadow: var(--sombra);
+            transition: all var(--transition);
+        }
+        .calendario-section:hover { box-shadow: var(--sombra-hover); }
+        .calendario-section .titulo-calendario {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--texto);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+        .calendario-section .titulo-calendario i { color: var(--naranja); }
+        .calendario-section .calendario-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .calendario-section .calendario-wrapper iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            border: none;
+        }
+        .calendario-section .link-calendario {
+            font-size: 0.7rem;
+            color: var(--texto-claro);
+            margin-top: 12px;
+            text-align: center;
+        }
+        .calendario-section .link-calendario a {
+            color: var(--azul);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(26, 58, 107, 0.06);
+            transition: all var(--transition);
+            display: inline-block;
+            min-height: 40px;
+            line-height: 24px;
+        }
+        .calendario-section .link-calendario a:hover { background: var(--azul); color: white; }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--azul-oscuro);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 0;
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 30px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-logo { font-size: 1.2rem; font-weight: 800; color: white; display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .footer-logo i { color: var(--naranja); }
+        .footer-desc { font-size: 0.8rem; line-height: 1.7; opacity: 0.7; max-width: 320px; }
+        .footer-social { display: flex; gap: 8px; margin-top: 12px; }
+        .footer-social a {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all var(--transition);
+            font-size: 0.9rem;
+        }
+        .footer-social a:hover { background: var(--naranja); color: white; transform: translateY(-3px); box-shadow: 0 4px 16px rgba(245, 124, 0, 0.3); }
+        .footer-col h4 { color: white; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { font-size: 0.75rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: all var(--transition); }
+        .footer-col ul li a:hover { color: var(--naranja-claro); }
+        .footer-col ul li i { width: 18px; color: var(--naranja-claro); font-size: 0.8rem; }
+        .footer-map iframe { width: 100%; height: 140px; border-radius: var(--radio); border: none; }
+        .footer-credits {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            text-align: center;
+        }
+        .footer-credits p { font-size: 0.7rem; opacity: 0.6; color: rgba(255, 255, 255, 0.6); }
+        .footer-credits p i { color: var(--naranja); margin-right: 6px; }
+        .footer-credits p strong { color: var(--naranja-claro); font-weight: 600; }
+        .footer-bottom { text-align: center; padding: 16px 0; font-size: 0.65rem; opacity: 0.4; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .container { padding: 0 20px; }
+            .grid-3 { gap: 16px; }
+            .licencias-grid { gap: 24px; }
+        }
+
+        @media (max-width: 820px) {
+            .hamburger { display: flex; }
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: var(--card-bg);
+                padding: 16px 24px;
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 30px var(--shadow-color);
+                border-top: 2px solid var(--naranja);
+                transition: background 0.3s ease;
+            }
+            .main-nav.open { display: block; }
+            .nav-list { flex-direction: column; gap: 2px; align-items: stretch; }
+            .nav-list a {
+                display: flex;
+                align-items: center;
+                min-height: 44px;
+                padding: 12px 16px;
+            }
+            .theme-toggle { margin-left: auto; margin-top: 8px; }
+
+            .grid-3 { grid-template-columns: 1fr 1fr; gap: 14px; }
+            .licencias-grid { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr 1fr; gap: 24px; }
+            .page-header h1 { font-size: 1.8rem; }
+            .calendario-section .calendario-wrapper iframe { height: 420px; }
+            .logo-icon { width: 50px; height: 50px; }
+            .logo-utn { font-size: 1rem; }
+            .card-asym { min-height: auto; }
+            .panel-wrapper .card-asym { min-height: auto; }
+            .panel-flotante { position: static; top: auto; margin-top: 8px; }
+            .licencias-section { padding: 24px 20px; }
+            .licencias-header h2 { font-size: 1.3rem; }
+            .licencias-header .icono-grande { font-size: 2rem; }
+            .btn-desplegar { padding: 12px 14px; font-size: 0.78rem; }
+            .modal-content { max-width: 95%; max-height: 90vh; }
+            .modal-body .logo-item { flex-wrap: wrap; gap: 8px; }
+            .modal-body .logo-item .acciones { width: 100%; justify-content: flex-start; }
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 16px; }
+            .main-header { padding: 10px 0; padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
+            .logo { gap: 10px; }
+            .logo-icon { width: 44px; height: 44px; padding: 4px; border-radius: 10px; }
+            .logo-utn { font-size: 0.95rem; }
+            .logo-sub { font-size: 0.48rem; letter-spacing: 1px; }
+
+            .page-header { padding: 28px 0 22px; }
+            .page-header h1 { font-size: 1.6rem; }
+            .page-header p { font-size: 0.88rem; }
+            .page-content { padding: 24px 0; }
+
+            .grid-3 { grid-template-columns: 1fr; gap: 12px; }
+            .card-asym { padding: 18px 16px; }
+
+            .licencias-section { padding: 20px 16px; }
+            .licencias-header { gap: 12px; }
+            .licencias-header h2 { font-size: 1.15rem; }
+            .licencias-header .icono-grande { font-size: 1.8rem; }
+
+            .calendario-section { padding: 20px 16px; }
+            .calendario-section .calendario-wrapper iframe { height: 380px; }
+
+            .footer-container { grid-template-columns: 1fr; gap: 20px; }
+            .footer-map iframe { height: 160px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 14px; }
+            .page-header h1 { font-size: 1.4rem; }
+            .page-header p { font-size: 0.82rem; }
+
+            .licencias-section { padding: 16px 14px; }
+            .licencias-header { flex-wrap: wrap; gap: 10px; }
+            .licencias-header h2 { font-size: 1rem; }
+            .licencias-header .icono-grande { font-size: 1.5rem; }
+            .licencias-col .bloque { padding: 14px 16px; }
+            .tabla-licencias td { padding: 5px 6px; font-size: 0.68rem; }
+            .tabla-licencias td:first-child { white-space: normal; }
+            .tabla-licencias td:last-child { text-align: left; display: block; padding-top: 0; border-bottom: none; }
+            .tabla-licencias tr { display: block; border-bottom: 1px solid var(--border-color); }
+            .tabla-licencias tr:last-child { border-bottom: none; }
+            .tabla-licencias tr:hover td { background: transparent; }
+            .lista-pasos-lic li { font-size: 0.72rem; padding-left: 24px; }
+            .lista-pasos-lic li::before { width: 18px; height: 18px; font-size: 0.5rem; }
+            .btn-ordenanza-lic { width: 100%; justify-content: center; }
+            .licencias-footer { flex-direction: column; text-align: center; }
+            .licencias-footer .cerrar-licencias { width: 100%; justify-content: center; }
+
+            .calendario-section .calendario-wrapper iframe { height: 340px; }
+
+            .modal-content { max-width: 98%; max-height: 95vh; border-radius: 12px; }
+            .modal-header { padding: 12px 16px; }
+            .modal-header h2 { font-size: 0.95rem; }
+            .modal-body { padding: 10px 12px; }
+            .modal-body .logo-item { padding: 8px 6px; gap: 8px; }
+            .modal-body .logo-item .preview { width: 44px; height: 44px; padding: 6px; }
+            .modal-body .logo-item .info .nombre { font-size: 0.72rem; }
+            .modal-body .logo-item .info .detalle { font-size: 0.58rem; }
+            .modal-body .logo-item .acciones a { padding: 6px 10px; font-size: 0.6rem; min-height: 32px; }
+
+            .footer-credits p { font-size: 0.62rem; }
+            .footer-bottom p { font-size: 0.6rem; }
+        }
+
+        @media (max-width: 360px) {
+            .container { padding: 0 12px; }
+            .page-header h1 { font-size: 1.25rem; }
+            .card-asym h3 { font-size: 0.88rem; }
+            .logo-icon { width: 40px; height: 40px; }
+            .logo-utn { font-size: 0.88rem; }
+            .logo-sub { font-size: 0.42rem; }
+            .licencias-header h2 { font-size: 0.95rem; }
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) {
+            .page-header { padding: 20px 0 16px; }
+            .page-content { padding: 20px 0; }
+            .modal-content { max-height: 95vh; }
+        }
+
+        @media (min-width: 1440px) {
+            .container { max-width: 1320px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        @media (prefers-contrast: high) {
+            .card-asym { border-left-width: 6px; }
+            .btn-primary, .btn-desplegar { border-width: 3px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="archivos/Logo CEUT_FETI.svg" alt="UTN FRRQ" />
+                </div>
+                <div>
+                    <div class="logo-utn">CEUT FETI</div>
+                    <div class="logo-sub">Centro de Estudiantes</div>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="academico.html" class="active">Académico</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-graduation-cap"></i> Académico</h1>
+            <p>Acceso rápido a todos los servicios y herramientas académicas</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="grid-3">
+                <!-- 1. Formularios -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnFormularios">
+                        <div class="icon"><i class="fas fa-file-pdf"></i></div>
+                        <h3>Formularios</h3>
+                        <p>Solicitudes y trámites para estudiantes</p>
+                        <span class="badge">7</span>
+                        <button class="btn-desplegar" id="btnToggleFormularios" style="margin-top:8px; width:100%;" aria-label="Ver formularios">
+                            <span class="btn-desplegar-texto">
+                                <i class="fas fa-file-pdf"></i> Ver formularios disponibles
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleFormularios"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelFormularios">
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/Acad_Solicitud_de_aumento_de_inasistencias_permitidas_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Aumento de Inasistencias Permitidas</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-003-Acad_Solicitud_De_Equivalencias_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Solicitud de Equivalencias</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-058-Acad_Solicitud_de_Interrupci%C3%B3n_a_la_Licencia_editable-.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Interrupción a la Licencia</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-059-Acad_Solicitud_de_Licencia_Estudiantil_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Licencia Estudiantil</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-056-Acad_Solicitud_De_renuncia_a_la_regularidad_en_materias_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Renuncia a la Regularidad</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-050-Acad_Solicitud_de_restitucion_de_condicion_de_alumno_regular_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Restitución de Estudiante Regular</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="http://www.frrq.utn.edu.ar/wp-content/uploads/2019/09/F-047-Acad_Solicitud_de_la_validaci%C3%B3n_del_cursado_editable.pdf" class="item" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="item-nombre">Validación del Cursado</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. WhatsApp Ing -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappIng">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Ing. Electromecánica</h3>
+                        <p>Grupos por año de la carrera de Ingeniería Electromecánica</p>
+                        <span class="badge-whatsapp">🔧 5 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappIng" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Ing. Electromecánica">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Ing. Electromecánica
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappIng"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappIng">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🔧 1er Año - Ing. Electromecánica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🔧 2do Año - Ing. Electromecánica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🔧 3er Año - Ing. Electromecánica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🔧 4to Año - Ing. Electromecánica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🔧 5to Año - Ing. Electromecánica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. WhatsApp Rural -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappRural">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Adm. Rural</h3>
+                        <p>Grupos por año de la Licenciatura en Administración Rural</p>
+                        <span class="badge-rural">🌿 4 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappRural" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Adm. Rural">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Adm. Rural
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappRural"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappRural">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🌿 1er Año - Adm. Rural</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🌿 2do Año - Adm. Rural</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🌿 3er Año - Adm. Rural</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🌿 4to Año - Adm. Rural</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. WhatsApp Higiene -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappHigiene">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Higiene y Seg.</h3>
+                        <p>Grupos por año de la Licenciatura en Higiene y Seguridad</p>
+                        <span class="badge-higiene">🛡️ 2 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappHigiene" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Higiene y Seguridad">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Higiene y Seg.
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappHigiene"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappHigiene">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🛡️ 1er Año - Higiene y Seguridad</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🛡️ 2do Año - Higiene y Seguridad</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. WhatsApp Industrial -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappIndustrial">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Ing. Industrial</h3>
+                        <p>Grupos por año de la carrera de Ingeniería Industrial</p>
+                        <span class="badge-industrial">🏭 5 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappIndustrial" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Ing. Industrial">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Ing. Industrial
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappIndustrial"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappIndustrial">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🏭 1er Año - Ing. Industrial</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🏭 2do Año - Ing. Industrial</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🏭 3er Año - Ing. Industrial</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🏭 4to Año - Ing. Industrial</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">🏭 5to Año - Ing. Industrial</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. WhatsApp Mecatrónica -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappMecatronica">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Mecatrónica</h3>
+                        <p>Grupos por año de la Tecnicatura en Mecatrónica</p>
+                        <span class="badge-mecatronica">⚙️ 2.5 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappMecatronica" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Mecatrónica">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Mecatrónica
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappMecatronica"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappMecatronica">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">⚙️ 1er Año - Mecatrónica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">⚙️ 2do Año - Mecatrónica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">⚙️ 3er Año - Mecatrónica</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. WhatsApp Logística -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappLogistica">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Logística</h3>
+                        <p>Grupos por año de la Tecnicatura en Logística</p>
+                        <span class="badge-logistica">📦 2.5 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappLogistica" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Logística">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Logística
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappLogistica"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappLogistica">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">📦 1er Año - Logística</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">📦 2do Año - Logística</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">📦 3er Año - Logística</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. WhatsApp Programación -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnWhatsappProgramacion">
+                        <div class="icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+                        <h3>WhatsApp · Programación</h3>
+                        <p>Grupos por año de la Tecnicatura en Programación</p>
+                        <span class="badge-programacion">💻 2 años</span>
+                        <button class="btn-desplegar" id="btnToggleWhatsappProgramacion" style="margin-top:8px; width:100%;" aria-label="Ver grupos de Programación">
+                            <span class="btn-desplegar-texto">
+                                <i class="fab fa-whatsapp"></i> Ver grupos de Programación
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleWhatsappProgramacion"></i>
+                        </button>
+                    </div>
+                    <div class="panel-flotante" id="panelWhatsappProgramacion">
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">💻 1er Año - Programación</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                        <a href="#" class="item item-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="item-nombre">💻 2do Año - Programación</span>
+                            <i class="fas fa-external-link-alt item-icono"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. Logos UTN - MODAL -->
+                <div class="panel-wrapper">
+                    <div class="card-asym panel-btn" id="btnLogos">
+                        <div class="icon"><i class="fas fa-file-invoice"></i></div>
+                        <h3>Logos UTN</h3>
+                        <p>Repositorio de logos institucionales para descargar.</p>
+                        <span class="badge">11 logos</span>
+                        <button class="btn-desplegar" id="btnToggleLogos" style="margin-top:8px; width:100%;" aria-label="Ver repositorio de logos">
+                            <span class="btn-desplegar-texto">
+                                <i class="fas fa-file-invoice"></i> Ver repositorio de logos
+                            </span>
+                            <i class="fas fa-chevron-down toggle-icon" id="iconToggleLogos"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 10. Licencias -->
+                <div class="card-asym card-licencias" id="btnLicencias">
+                    <div class="icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Licencias Estudiantiles</h3>
+                    <p>Conocé las causales para solicitar una licencia y pausar tus actividades académicas sin perder tus derechos.</p>
+                    <span class="badge">Ordenanza 1705</span>
+                    <button class="btn-desplegar btn-desplegar-licencias" id="btnToggleLicencias" style="margin-top:8px; width:100%;" aria-label="Ver información de licencias">
+                        <span class="btn-desplegar-texto">
+                            <i class="fas fa-file-contract"></i> Ver información completa
+                        </span>
+                        <i class="fas fa-chevron-down toggle-licencias" id="iconToggleLicencias"></i>
+                    </button>
+                </div>
+
+                <!-- 11. Reglamento -->
+                <div class="card-asym card-licencias" id="btnReglamento">
+                    <div class="icon"><i class="fas fa-book"></i></div>
+                    <h3>Reglamento de Estudio</h3>
+                    <p>Conocé tus derechos y obligaciones como estudiante: régimen de cursado, regularidad y exámenes.</p>
+                    <span class="badge">Ordenanza 1549</span>
+                    <button class="btn-desplegar btn-desplegar-licencias" id="btnToggleReglamento" style="margin-top:8px; width:100%;" aria-label="Ver reglamento completo">
+                        <span class="btn-desplegar-texto">
+                            <i class="fas fa-book"></i> Ver información completa
+                        </span>
+                        <i class="fas fa-chevron-down toggle-licencias" id="iconToggleReglamento"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN LICENCIAS ===== -->
+            <div class="licencias-section" id="licenciasSeccion">
+                <div class="licencias-header">
+                    <div class="icono-grande"><i class="fas fa-file-contract"></i></div>
+                    <h2>
+                        Licencias Estudiantiles
+                        <span class="badge-ordenanza">Ordenanza 1705</span>
+                    </h2>
+                </div>
+                <div class="licencias-grid">
+                    <div class="licencias-col">
+                        <div class="bloque">
+                            <h4><i class="fas fa-question-circle"></i> ¿Qué es?</h4>
+                            <p>Es una norma de la <strong>UTN</strong> que dice:</p>
+                            <p style="font-style:italic; background:var(--card-bg); padding:8px 12px; border-radius:6px; border-left:3px solid var(--naranja); margin:6px 0 0;">
+                                "Si sos estudiante y por determinada situación no podés estudiar durante un tiempo, podés pedir una <strong>licencia estudiantil</strong> para pausar tus actividades académicas sin perder tus derechos."
+                            </p>
+                        </div>
+                        <div class="bloque">
+                            <h4><i class="fas fa-check-circle"></i> ¿Qué pasa si te dan la licencia?</h4>
+                            <p>Durante la licencia:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> No perdés las condiciones académicas que ya tenías.</li>
+                                <li><i class="fas fa-check"></i> No se considera que hayas tenido un rendimiento negativo por ese período.</li>
+                                <li><i class="fas fa-check"></i> Si estabas cursando una materia, podés continuarla cuando vuelvas y conservar tus derechos para rendir las evaluaciones.</li>
+                                <li><i class="fas fa-check"></i> El tiempo que estés de licencia no se cuenta como tiempo de permanencia en la carrera.</li>
+                                <li><i class="fas fa-check"></i> La licencia no te quita una beca de ayuda económica de la UTN.</li>
+                            </ul>
+                        </div>
+                        <div class="bloque destacado">
+                            <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                            <p>Mientras estás de licencia no podés realizar normalmente actividades académicas como cursar, rendir parciales o entregar trabajos. <strong>Sí se permite rendir finales</strong>, según la ordenanza.</p>
+                        </div>
+                    </div>
+                    <div class="licencias-col">
+                        <div class="bloque">
+                            <h4><i class="fas fa-list"></i> ¿Por qué motivos podés pedirla?</h4>
+                            <p>La ordenanza contempla, entre otros:</p>
+                            <table class="tabla-licencias">
+                                <tr><td>👷 Trabajo que te impida asistir</td><td>Según la situación laboral</td></tr>
+                                <tr><td>💍 Matrimonio</td><td>10 días hábiles</td></tr>
+                                <tr><td>🤰 Embarazo/maternidad</td><td>Hasta 90 días</td></tr>
+                                <tr><td>👶 Paternidad / progenitor no gestante</td><td>15 días</td></tr>
+                                <tr><td>👨‍👩‍👧 Adopción</td><td>Régimen especial</td></tr>
+                                <tr><td>🏥 Cuidar a un familiar enfermo</td><td>Hasta 20 días/año</td></tr>
+                                <tr><td>⚰️ Fallecimiento de familiar</td><td>3 a 5 días</td></tr>
+                                <tr><td>🏆 Eventos académicos/deportivos/culturales</td><td>Duración del evento</td></tr>
+                                <tr><td>🎓 Actividades de representación estudiantil</td><td>Hasta 30 días/año</td></tr>
+                                <tr><td>✈️ Intercambio académico</td><td>Hasta 12 meses</td></tr>
+                                <tr><td>🩹 Enfermedad o lesión de corto tratamiento</td><td>Hasta 45 días/año</td></tr>
+                                <tr><td>🏥 Enfermedad o lesión de largo tratamiento</td><td>Hasta 2 años</td></tr>
+                                <tr><td>🫀 Donación de órganos</td><td>Hasta 30 días antes + 60 después</td></tr>
+                            </table>
+                        </div>
+                        <div class="bloque">
+                            <h4><i class="fas fa-clipboard-list"></i> ¿Cómo solicitarla?</h4>
+                            <ol class="lista-pasos-lic">
+                                <li>Hacer una solicitud formal.</li>
+                                <li>Explicar por qué necesitás la licencia.</li>
+                                <li>Presentar los documentos que demuestren la situación a <strong>Alumnado / Secretaría Académica</strong>.</li>
+                                <li>La solicitud pasa por las autoridades correspondientes de tu Facultad Regional.</li>
+                                <li>Finalmente se decide si se otorga.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="licencias-footer">
+                    <a href="archivos/Ord 1705 Licencias Estudiantiles.pdf" target="_blank" class="btn-ordenanza-lic">
+                        <i class="fas fa-file-pdf"></i> Descargar Ordenanza 1705
+                    </a>
+                    <button class="cerrar-licencias" id="btnCerrarLicencias">
+                        <i class="fas fa-times"></i> Cerrar información
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN REGLAMENTO ===== -->
+            <div class="licencias-section" id="reglamentoSeccion">
+                <div class="licencias-header">
+                    <div class="icono-grande"><i class="fas fa-book"></i></div>
+                    <h2>
+                        Reglamento de Estudio
+                        <span class="badge-ordenanza">Ordenanza 1549</span>
+                    </h2>
+                </div>
+                <div class="licencias-grid">
+                    <div class="licencias-col">
+                        <div class="bloque">
+                            <h4><i class="fas fa-question-circle"></i> ¿Qué es?</h4>
+                            <p>Es la norma de la <strong>UTN</strong> que regula la vida académica de los estudiantes de carreras de grado. Define tus derechos, obligaciones y las condiciones para cursar, rendir y promocionar las materias.</p>
+                        </div>
+                        <div class="bloque">
+                            <h4><i class="fas fa-user-graduate"></i> Condición de alumno</h4>
+                            <p>El reglamento establece distintas situaciones académicas según el cumplimiento de los requisitos de cada materia:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Alumno regular:</strong> cumple con asistencia y evaluaciones.</li>
+                                <li><i class="fas fa-check"></i> <strong>Alumno libre:</strong> no alcanzó la regularidad, pero puede rendir bajo ciertas condiciones.</li>
+                                <li><i class="fas fa-check"></i> <strong>Alumno vocacional:</strong> cursa sin aspirar al título.</li>
+                            </ul>
+                        </div>
+                        <div class="bloque destacado">
+                            <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                            <p>Ante cualquier duda sobre tu situación académica, consultá siempre con <strong>Alumnado / Secretaría Académica</strong> o acercate al Centro de Estudiantes.</p>
+                        </div>
+                    </div>
+                    <div class="licencias-col">
+                        <div class="bloque">
+                            <h4><i class="fas fa-list"></i> Temas que regula</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Inscripción a materias y exámenes.</li>
+                                <li><i class="fas fa-check"></i> Régimen de cursado y asistencia.</li>
+                                <li><i class="fas fa-check"></i> Evaluaciones, parciales y recuperatorios.</li>
+                                <li><i class="fas fa-check"></i> Condiciones de regularidad y promoción.</li>
+                                <li><i class="fas fa-check"></i> Exámenes finales y turnos.</li>
+                                <li><i class="fas fa-check"></i> Equivalencias y validación de cursado.</li>
+                                <li><i class="fas fa-check"></i> Situaciones especiales del estudiante.</li>
+                            </ul>
+                        </div>
+                        <div class="bloque">
+                            <h4><i class="fas fa-clipboard-list"></i> ¿Dónde consultar?</h4>
+                            <p>El texto completo está disponible en la ordenanza oficial. Podés descargarla desde el botón de abajo o consultarla en <strong>Alumnado</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="licencias-footer">
+                    <a href="archivos/Ord-1549-Reglamento-de-Estudio-para-Carreras-de-Grado.pdf" target="_blank" class="btn-ordenanza-lic">
+                        <i class="fas fa-file-pdf"></i> Descargar Ordenanza 1549
+                    </a>
+                    <button class="cerrar-licencias" id="btnCerrarReglamento">
+                        <i class="fas fa-times"></i> Cerrar información
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== CALENDARIO ===== -->
+            <div class="calendario-section" id="calendario">
+                <div class="titulo-calendario">
+                    <i class="fas fa-calendar-alt"></i> Calendario Académico
+                </div>
+                <div class="calendario-wrapper">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showCalendars=0&amp;title=Biblioteca&amp;src=YmlibGlvdGVjYS5mcnJxQGdtYWlsLmNvbQ&amp;src=NDM0NTA3OTg0OTBiNDhhZTU4ZDViZWE4ZTkzZGZmM2RiZGRhYzk5MGY4MWU1ZGEzZDIzNDkxZTc3MDRkZjFlN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23d50000&amp;color=%230b8043"
+                    style="border-width:0;" width="100%" height="500" frameborder="0" scrolling="no" loading="lazy">
+                </iframe>
+            </div>
+            <div class="link-calendario">
+                <a href="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FArgentina%2FBuenos_Aires&amp;showPrint=0&amp;showCalendars=0&amp;title=Biblioteca&amp;src=YmlibGlvdGVjYS5mcnJxQGdtYWlsLmNvbQ&amp;src=NDM0NTA3OTg0OTBiNDhhZTU4ZDViZWE4ZTkzZGZmM2RiZGRhYzk5MGY4MWU1ZGEzZDIzNDkxZTc3MDRkZjFlN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23d50000&amp;color=%230b8043" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Abrir calendario en nueva ventana
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL DE LOGOS ===== -->
+    <div class="modal-overlay" id="modalLogos">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-file-invoice"></i> Repositorio de Logos UTN</h2>
+                <button class="modal-close" id="modalClose" aria-label="Cerrar modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/Logo_CEUT_FETI.png" alt="Logo CEUT FETI" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">CEUT FETI</div><div class="detalle">Logo del Centro de Estudiantes</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/Logo_CEUT_FETI.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/Logo_CEUT_FETI.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/Logo_nuevo_UTN.png" alt="Logo nuevo UTN" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">Logo Nuevo UTN</div><div class="detalle">Versión actualizada del logo UTN</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/Logo_nuevo_UTN.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/Logo_nuevo UTN.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-azul-HQ.png" alt="Logo UTN Azul HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Azul HQ</div><div class="detalle">Logo UTN en azul - Alta calidad</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-azul-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-azul-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-blanco-HQ.png" alt="Logo UTN Blanco HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Blanco HQ</div><div class="detalle">Logo UTN en blanco - Alta calidad</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-blanco-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-blanco-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-negro-HQ.png" alt="Logo UTN Negro HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Negro HQ</div><div class="detalle">Logo UTN en negro - Alta calidad</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-negro-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-negro-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTNReco-azul-HQ.png" alt="Logo UTN Reco Azul HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Reco Azul HQ</div><div class="detalle">Logo UTN Reconquista en azul</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-azul-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-azul-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTNReco-blanco-HQ.png" alt="Logo UTN Reco Blanco HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Reco Blanco HQ</div><div class="detalle">Logo UTN Reconquista en blanco</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-blanco-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-blanco-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTNReco-negro-HQ.png" alt="Logo UTN Reco Negro HQ" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Reco Negro HQ</div><div class="detalle">Logo UTN Reconquista en negro</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-negro-HQ.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTNReco-negro-HQ.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-vertical-azul-1.png" alt="Logo UTN Vertical Azul" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Vertical Azul</div><div class="detalle">Logo UTN vertical en azul</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-azul-1.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-azul-1.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-vertical-blanco-1.png" alt="Logo UTN Vertical Blanco" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Vertical Blanco</div><div class="detalle">Logo UTN vertical en blanco</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-blanco-1.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-blanco-1.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="preview"><img src="archivos/Repositorio Logos/LogoUTN-vertical-negro-2.png" alt="Logo UTN Vertical Negro" loading="lazy" /></div>
+                    <div class="info"><div class="nombre">UTN Vertical Negro</div><div class="detalle">Logo UTN vertical en negro</div></div>
+                    <div class="acciones">
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-negro-2.png" download class="btn-png"><i class="fas fa-download"></i> PNG</a>
+                        <a href="archivos/Repositorio Logos/LogoUTN-vertical-negro-2.svg" download class="btn-svg"><i class="fas fa-download"></i> SVG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div>
+                <div class="footer-logo"><i class="fas fa-graduation-cap"></i>UTN FRRQ</div>
+                <p class="footer-desc">Universidad Tecnológica Nacional · Facultad Regional Reconquista · Formando profesionales desde 1959.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="https://frrq.cvg.utn.edu.ar/" target="_blank" rel="noopener noreferrer">Moodle</a></li>
+                    <li><a href="https://www3.frrq.utn.edu.ar/sysacadweb/loginalumno.asp" target="_blank" rel="noopener noreferrer">SYSACAD</a></li>
+                    <li><a href="https://www.frrq.utn.edu.ar/biblioteca-ing-alcides-martinez/" target="_blank" rel="noopener noreferrer">Biblioteca</a></li>
+                    <li><a href="https://www.frrq.utn.edu.ar" target="_blank" rel="noopener noreferrer">UTN FRRQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> feticeut@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +54 3482 211788</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 44 Nº 1000</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6969.241812949353!2d-59.66433200000001!3d-29.146370000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944eb070e4b85b65%3A0x2aae9b3904deeb0f!2sUTN%20-%20Facultad%20Regional%20Reconquista!5e0!3m2!1ses!2sus!4v1785991252262!5m2!1ses!2sus"
+                    width="100%" height="140" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+                </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <div class="container">
+                <p><i class="fas fa-code"></i> Desarrollado por <strong>Bergesio Sebastián</strong> &amp; <strong>Fernández María Eugenia</strong></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2026 UTN FRRQ · Todos los derechos reservados</p></div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== DETECCIÓN DE DISPOSITIVO =====
+        (function() {
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isTouch) document.documentElement.classList.add('touch-device');
+
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (isIOS) document.documentElement.classList.add('ios');
+
+            const isAndroid = /Android/.test(navigator.userAgent);
+            if (isAndroid) document.documentElement.classList.add('android');
+
+            function setVH() {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+            setVH();
+            window.addEventListener('resize', setVH);
+            window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+        })();
+
+        // ===== TEMA =====
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // ===== HAMBURGER MEJORADO =====
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mainNav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+            });
+
+            document.querySelectorAll('.nav-list a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 820) {
+                        mainNav.classList.remove('open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            document.addEventListener('click', function(event) {
+                const isClickInside = mainNav.contains(event.target) || hamburger.contains(event.target);
+                if (!isClickInside && window.innerWidth <= 820) {
+                    mainNav.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (window.innerWidth > 820) {
+                        mainNav.classList.remove('open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                }, 150);
+            });
+        }
+
+        // ===== SETUP PANELES FLOTANTES =====
+        function setupPanel(cardId, panelId, iconId, toggleBtnId) {
+            const card = document.getElementById(cardId);
+            const panel = document.getElementById(panelId);
+            const icon = document.getElementById(iconId);
+            const toggleBtn = document.getElementById(toggleBtnId);
+
+            if (!card || !panel || !icon) return;
+
+            function toggle() {
+                panel.classList.toggle('visible');
+                card.classList.toggle('abierto');
+                if (toggleBtn) toggleBtn.classList.toggle('abierto');
+                if (panel.classList.contains('visible')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            card.addEventListener('click', function(e) {
+                if (toggleBtn && toggleBtn.contains(e.target)) return;
+                toggle();
+            });
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggle();
+                });
+            }
+
+            document.addEventListener('click', function(event) {
+                const wrapper = card.closest('.panel-wrapper');
+                if (wrapper && !wrapper.contains(event.target)) {
+                    panel.classList.remove('visible');
+                    card.classList.remove('abierto');
+                    if (toggleBtn) toggleBtn.classList.remove('abierto');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            panel.querySelectorAll('.item').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    panel.classList.remove('visible');
+                    card.classList.remove('abierto');
+                    if (toggleBtn) toggleBtn.classList.remove('abierto');
+                    icon.style.transform = 'rotate(0deg)';
+                });
+            });
+        }
+
+        setupPanel('btnFormularios', 'panelFormularios', 'iconToggleFormularios', 'btnToggleFormularios');
+        setupPanel('btnWhatsappIng', 'panelWhatsappIng', 'iconToggleWhatsappIng', 'btnToggleWhatsappIng');
+        setupPanel('btnWhatsappRural', 'panelWhatsappRural', 'iconToggleWhatsappRural', 'btnToggleWhatsappRural');
+        setupPanel('btnWhatsappHigiene', 'panelWhatsappHigiene', 'iconToggleWhatsappHigiene', 'btnToggleWhatsappHigiene');
+        setupPanel('btnWhatsappIndustrial', 'panelWhatsappIndustrial', 'iconToggleWhatsappIndustrial', 'btnToggleWhatsappIndustrial');
+        setupPanel('btnWhatsappMecatronica', 'panelWhatsappMecatronica', 'iconToggleWhatsappMecatronica', 'btnToggleWhatsappMecatronica');
+        setupPanel('btnWhatsappLogistica', 'panelWhatsappLogistica', 'iconToggleWhatsappLogistica', 'btnToggleWhatsappLogistica');
+        setupPanel('btnWhatsappProgramacion', 'panelWhatsappProgramacion', 'iconToggleWhatsappProgramacion', 'btnToggleWhatsappProgramacion');
+
+        // ===== MODAL LOGOS =====
+        const btnLogos = document.getElementById('btnLogos');
+        const modalLogos = document.getElementById('modalLogos');
+        const modalClose = document.getElementById('modalClose');
+        const iconToggleLogos = document.getElementById('iconToggleLogos');
+        const btnToggleLogos = document.getElementById('btnToggleLogos');
+
+        function openModal() {
+            modalLogos.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+        }
+
+        function closeModal() {
+            modalLogos.classList.remove('active');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            if (btnToggleLogos) btnToggleLogos.classList.remove('abierto');
+            if (iconToggleLogos) iconToggleLogos.style.transform = 'rotate(0deg)';
+        }
+
+        if (btnLogos) {
+            btnLogos.addEventListener('click', function(e) {
+                if (btnToggleLogos && btnToggleLogos.contains(e.target)) return;
+                openModal();
+            });
+        }
+
+        if (btnToggleLogos) {
+            btnToggleLogos.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal();
+            });
+        }
+
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+
+        if (modalLogos) {
+            modalLogos.addEventListener('click', function(e) {
+                if (e.target === modalLogos) closeModal();
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalLogos && modalLogos.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // ===== LICENCIAS =====
+        const btnLicencias = document.getElementById('btnLicencias');
+        const btnToggleLicencias = document.getElementById('btnToggleLicencias');
+        const seccionLicencias = document.getElementById('licenciasSeccion');
+        const iconToggleLicencias = document.getElementById('iconToggleLicencias');
+        const btnCerrarLicencias = document.getElementById('btnCerrarLicencias');
+
+        let licenciasAbierto = false;
+
+        function toggleLicencias() {
+            licenciasAbierto = !licenciasAbierto;
+            seccionLicencias.classList.toggle('visible');
+            btnLicencias.classList.toggle('abierto');
+            if (btnToggleLicencias) btnToggleLicencias.classList.toggle('abierto');
+
+            if (licenciasAbierto) {
+                iconToggleLicencias.style.transform = 'rotate(180deg)';
+                setTimeout(() => {
+                    seccionLicencias.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                iconToggleLicencias.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        btnLicencias.addEventListener('click', function(e) {
+            if (btnToggleLicencias && btnToggleLicencias.contains(e.target)) return;
+            toggleLicencias();
+        });
+
+        if (btnToggleLicencias) {
+            btnToggleLicencias.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleLicencias();
+            });
+        }
+
+        btnCerrarLicencias.addEventListener('click', function() {
+            if (licenciasAbierto) toggleLicencias();
+        });
+
+        // ===== REGLAMENTO =====
+        const btnReglamento = document.getElementById('btnReglamento');
+        const btnToggleReglamento = document.getElementById('btnToggleReglamento');
+        const seccionReglamento = document.getElementById('reglamentoSeccion');
+        const iconToggleReglamento = document.getElementById('iconToggleReglamento');
+        const btnCerrarReglamento = document.getElementById('btnCerrarReglamento');
+
+        let reglamentoAbierto = false;
+
+        function toggleReglamento() {
+            reglamentoAbierto = !reglamentoAbierto;
+            seccionReglamento.classList.toggle('visible');
+            btnReglamento.classList.toggle('abierto');
+            if (btnToggleReglamento) btnToggleReglamento.classList.toggle('abierto');
+
+            if (reglamentoAbierto) {
+                iconToggleReglamento.style.transform = 'rotate(180deg)';
+                setTimeout(() => {
+                    seccionReglamento.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                iconToggleReglamento.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        btnReglamento.addEventListener('click', function(e) {
+            if (btnToggleReglamento && btnToggleReglamento.contains(e.target)) return;
+            toggleReglamento();
+        });
+
+        if (btnToggleReglamento) {
+            btnToggleReglamento.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleReglamento();
+            });
+        }
+
+        btnCerrarReglamento.addEventListener('click', function() {
+            if (reglamentoAbierto) toggleReglamento();
+        });
+
+        // ===== AJUSTAR CALENDARIO RESPONSIVE =====
+        function ajustarAlturaCalendario() {
+            const iframe = document.querySelector('.calendario-wrapper iframe');
+            if (!iframe) return;
+            if (window.innerWidth <= 480) {
+                iframe.style.height = '340px';
+            } else if (window.innerWidth <= 640) {
+                iframe.style.height = '380px';
+            } else if (window.innerWidth <= 820) {
+                iframe.style.height = '420px';
+            } else {
+                iframe.style.height = '500px';
+            }
+        }
+        ajustarAlturaCalendario();
+        window.addEventListener('resize', ajustarAlturaCalendario);
+
+        // ===== CERRAR MODAL EN LANDSCAPE =====
+        window.addEventListener('orientationchange', () => {
+            if (modalLogos && modalLogos.classList.contains('active') && window.innerHeight < 500) {
+                closeModal();
+            }
+        });
+
+        // ===== SERVICE WORKER =====
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registrado:', registration))
+                    .catch(error => console.log('Error SW:', error));
+            });
+        }
+    </script>
+
+    <script src="chatbot.js" defer></script>
+</body>
+</html>
